@@ -1,4 +1,4 @@
-#### Tesla clone following React Redux tuotorial by Naz at Clever Porgrammer
+#### Tesla clone following React Redux tutorial by Naz at Clever Porgrammer
 
 #### yarn create react-app my-app --template redux
 
