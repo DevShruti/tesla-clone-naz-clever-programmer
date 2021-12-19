@@ -1,19 +1,21 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 // import MenuIcon from '/images/menu.svg';
+import {selectCars} from "../features/car/carSlice";
+import {useSelector} from 'react-redux'
 
 function Header() {
    const [burgerStatus, setburgerStatus] = useState(false)
+   const cars = useSelector(selectCars)
     return (
         <Container>
           <a>
               <img src='/images/logo.svg' alt = ""/>
           </a>
           <Menu>
-           <a href='#'>Model S</a>
-           <a href='#'>Model 3</a>
-           <a href='#'>Model X</a>
-           <a href='#'>Model Y</a>
+            {cars && cars.map((car, index) =>(
+               <a key={index} href='#'>{car}</a>
+            ))}
            </Menu>
            <RightMenu>
             <a href='#'>Shop</a>
@@ -28,6 +30,9 @@ function Header() {
              <img src='/images/xicon.png' alt = ""/>
              </CustomClose>
              </CloseWrapper>
+             {cars && cars.map((car, index) =>(
+              <li><a key={index} href='#'>{car}</a></li>
+            ))}
              <li><a href='#'>Existing Inventory</a></li>
              <li><a href='#'>Used Inventory</a></li>
              <li><a href='#'>Trade-in</a></li>
@@ -40,7 +45,6 @@ function Header() {
              <li><a href='#'>Utilities</a></li>
              <li><a href='#'>Find Us</a></li>
              <li><a href='#'>Support</a></li>
-             <li><a href='#'>Investor Relations</a></li>
            </BurgerNav>
          </Container > 
            
