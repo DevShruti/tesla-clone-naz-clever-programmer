@@ -21,3 +21,5 @@
 #### yarn add react-reveal
 
 #### yarn add install-peers (to help with deployment)
+
+#### Change build setting to : CI= npm run build 
