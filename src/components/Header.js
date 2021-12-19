@@ -30,6 +30,9 @@ function Header() {
              <img src='/images/xicon.png' alt = ""/>
              </CustomClose>
              </CloseWrapper>
+             {cars && cars.map((car, index) =>(
+              <li><a key={index} href='#'>{car}</a></li>
+            ))}
              <li><a href='#'>Existing Inventory</a></li>
              <li><a href='#'>Used Inventory</a></li>
              <li><a href='#'>Trade-in</a></li>
@@ -42,7 +45,6 @@ function Header() {
              <li><a href='#'>Utilities</a></li>
              <li><a href='#'>Find Us</a></li>
              <li><a href='#'>Support</a></li>
-             <li><a href='#'>Investor Relations</a></li>
            </BurgerNav>
          </Container > 
            
