@@ -1,3 +1,5 @@
+## Enjoy the [Deployed Site](https://tesla-website-clone-devshruti.netlify.app/)
+
 #### Tesla clone following React Redux tutorial by Naz at Clever Porgrammer
 
 #### yarn create react-app my-app --template redux
