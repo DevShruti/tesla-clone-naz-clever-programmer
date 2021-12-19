@@ -12,6 +12,7 @@ function Section({title, description, backgroundImg, leftBtnTxt, rightBtnTxt }) 
             </ItemText>
             </Fade>
             <Buttons>
+            <Fade bottom>
             <ButtonGroup>
                 <LeftButton>
                    {leftBtnTxt}
@@ -22,6 +23,7 @@ function Section({title, description, backgroundImg, leftBtnTxt, rightBtnTxt }) 
                 </RightButton>
                   }
             </ButtonGroup>
+            </Fade>
             <DownArrow src="./images/down-arrow.svg" />
             </Buttons>
         </Wrap>
@@ -33,7 +35,6 @@ export default Section
 const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
-  background: orange;
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,6 +47,7 @@ const Wrap = styled.div`
 const ItemText = styled.div`
 padding-top: 15vh;
 text-align: center;
+z-index: -1;
 
 `
 const ButtonGroup = styled.div`
