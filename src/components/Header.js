@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '/images/menu.svg';
 
 function Header() {
     return (
@@ -17,7 +17,9 @@ function Header() {
            <RightMenu>
             <a href='#'>Shop</a>
             <a href='#'>Tesla Account</a>
-            {/*<CustomMenu/> */}
+            <CustomMenu>
+            <img src='/images/menu.svg' alt = ""/>
+              </CustomMenu> 
            </RightMenu>
       
          </Container > 
@@ -50,12 +52,20 @@ const Menu = styled.div `
       padding: 0 10px;
       flex-wrap: no-wrap;
   }
+  @media(max-width: 768px){
+    display:none;
+  }
 `
 const RightMenu = styled.div`
+display: flex;
+align-items: center;
 a {
     font-weight: 600;
     text-transform : uppercase;
     margin-right: 10px;
 }
 `
-//const CustomMenu = styled(MenuIcon)``
+const CustomMenu = styled.div`
+  cursor: pointer;
+  color: #393c41; 
+`
