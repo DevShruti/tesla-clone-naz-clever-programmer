@@ -18,13 +18,13 @@ function Header() {
            <RightMenu>
             <a href='#'>Shop</a>
             <a href='#'>Tesla Account</a>
-            <CustomMenu>
+            <CustomMenu onClick = {() => setburgerStatus(true)}>
             <img src='/images/menu.svg' alt = ""/>
               </CustomMenu> 
            </RightMenu>
            <BurgerNav show={burgerStatus}>
              <CloseWrapper>
-             <CustomClose>
+             <CustomClose onClick = {() => setburgerStatus(false)}>
              <img src='/images/xicon.png' alt = ""/>
              </CustomClose>
              </CloseWrapper>
@@ -105,6 +105,7 @@ const BurgerNav = styled.div`
   flex-direction: column;
   text-align: start;
   transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
+  transition: transform 0.2s;
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0,0,0,0.2);
