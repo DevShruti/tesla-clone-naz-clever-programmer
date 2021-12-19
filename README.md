@@ -17,3 +17,5 @@
 #### yarn add @material-ui/icons
 
 #### yarn add react-reveal
+
+#### yarn add install-peers (to help with deployment)
